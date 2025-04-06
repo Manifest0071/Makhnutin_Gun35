@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\StringList\bin\Debug\net8.0\StringList.exe
+C:\Users\user\source\repos\StringList\bin\Debug\net8.0\StringList.deps.json
+C:\Users\user\source\repos\StringList\bin\Debug\net8.0\StringList.runtimeconfig.json
+C:\Users\user\source\repos\StringList\bin\Debug\net8.0\StringList.dll
+C:\Users\user\source\repos\StringList\bin\Debug\net8.0\StringList.pdb
+C:\Users\user\source\repos\StringList\obj\Debug\net8.0\StringList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\StringList\obj\Debug\net8.0\StringList.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\StringList\obj\Debug\net8.0\StringList.AssemblyInfo.cs
+C:\Users\user\source\repos\StringList\obj\Debug\net8.0\StringList.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\StringList\obj\Debug\net8.0\StringList.dll
+C:\Users\user\source\repos\StringList\obj\Debug\net8.0\refint\StringList.dll
+C:\Users\user\source\repos\StringList\obj\Debug\net8.0\StringList.pdb
+C:\Users\user\source\repos\StringList\obj\Debug\net8.0\StringList.genruntimeconfig.cache
+C:\Users\user\source\repos\StringList\obj\Debug\net8.0\ref\StringList.dll
