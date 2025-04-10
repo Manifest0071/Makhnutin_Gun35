@@ -42,12 +42,13 @@ namespace GamePrototype.Units
                 if (_equipment.ContainsKey(equipItem.Slot))
                 {
                     var replaced = _equipment[equipItem.Slot];
-                    Console.WriteLine($"{equipItem.Slot} replaced: {replaced.Name} -> {equipItem.Name}");
                     _equipment[equipItem.Slot] = equipItem;
+                    Console.WriteLine($"[EQUIP] {equipItem.Slot} replaced: {replaced.Name} -> {equipItem.Name}");
                 }
                 else
                 {
                     _equipment.Add(equipItem.Slot, equipItem);
+                    Console.WriteLine($"[EQUIP] Equipped {equipItem.Name} to slot {equipItem.Slot}");
                 }
                 return;
             }
@@ -56,9 +57,19 @@ namespace GamePrototype.Units
 
         private void UseEconomicItem(EconomicItem economicItem)
         {
-            if (economicItem is HealthPotion healthPotion) 
+            if (economicItem is HealthPotion healthPotion)
             {
                 Health += healthPotion.HealthRestore;
+                Console.WriteLine($"[POTION] Restored {healthPotion.HealthRestore} HP. Current: {Health}/{MaxHealth}");
+            }
+            else if (economicItem is Grindstone)
+            {
+                if (_equipment.TryGetValue(EquipSlot.Weapon, out var item) && item is Weapon weapon)
+                {
+                    weapon.Repair(5);
+                    Console.WriteLine($"[WHETSTONE] {weapon.Name} repaired. Current durability: {weapon.Durability}");
+                }
+                Inventory.TryRemove(economicItem); 
             }
         }
 
@@ -67,7 +78,8 @@ namespace GamePrototype.Units
             if (_equipment.TryGetValue(EquipSlot.Armour, out var item) && item is Armour armour)
             {
                 damage -= (uint)(damage * (armour.Defence / 100f));
-                armour.ReduceDurability(1); 
+                armour.ReduceDurability(1);
+                Console.WriteLine($"[ARMOUR] {armour.Name} durability decreased to {armour.Durability}");
             }
             return damage;
         }
