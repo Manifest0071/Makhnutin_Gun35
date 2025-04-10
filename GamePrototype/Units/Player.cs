@@ -37,9 +37,18 @@ namespace GamePrototype.Units
 
         public override void AddItemToInventory(Item item)
         {
-            if (item is EquipItem equipItem && _equipment.TryAdd(equipItem.Slot, equipItem)) 
+            if (item is EquipItem equipItem)
             {
-                // Item was equipped
+                if (_equipment.ContainsKey(equipItem.Slot))
+                {
+                    var replaced = _equipment[equipItem.Slot];
+                    Console.WriteLine($"{equipItem.Slot} replaced: {replaced.Name} -> {equipItem.Name}");
+                    _equipment[equipItem.Slot] = equipItem;
+                }
+                else
+                {
+                    _equipment.Add(equipItem.Slot, equipItem);
+                }
                 return;
             }
             base.AddItemToInventory(item);
@@ -55,9 +64,10 @@ namespace GamePrototype.Units
 
         protected override uint CalculateAppliedDamage(uint damage)
         {
-            if (_equipment.TryGetValue(EquipSlot.Armour, out var item) && item is Armour armour) 
+            if (_equipment.TryGetValue(EquipSlot.Armour, out var item) && item is Armour armour)
             {
                 damage -= (uint)(damage * (armour.Defence / 100f));
+                armour.ReduceDurability(1); 
             }
             return damage;
         }

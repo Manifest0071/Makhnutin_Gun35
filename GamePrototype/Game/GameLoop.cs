@@ -16,24 +16,32 @@ namespace GamePrototype.Game
             Initialize();
             Console.WriteLine("Entering the dungeon");
             StartGameLoop();
+
         }
 
+        
         #region Game Loop
 
         private void Initialize()
         {
-            Console.WriteLine("Welcome, player!");
-            _dungeon = DungeonBuilder.BuildDungeon();
+            Console.WriteLine("Choose difficulty: 0 - Easy, 1 - Hard");
+            var difficulty = Enum.TryParse<Difficulty>(Console.ReadLine(), out var parsed) ? parsed : Difficulty.Easy;
+
+            IUnitFactory unitFactory = difficulty == Difficulty.Easy ? new EasyUnitFactory() : new HardUnitFactory();
+            IDungeonBuilder dungeonBuilder = difficulty == Difficulty.Easy ? new EasyDungeonBuilder() : new HardDungeonBuilder();
+
             Console.WriteLine("Enter your name");
-            _player = UnitFactoryDemo.CreatePlayer(Console.ReadLine());
-            Console.WriteLine($"Hello {_player.Name}");
+            _player = unitFactory.CreatePlayer(Console.ReadLine());
+            _dungeon = dungeonBuilder.BuildDungeon(); 
+
+            Console.WriteLine($"Hello {_player.Name}, difficulty: {difficulty}");
         }
 
         private void StartGameLoop()
         {
             var currentRoom = _dungeon;
-            
-            while (currentRoom.IsFinal == false) 
+
+            while (currentRoom.IsFinal == false)
             {
                 StartRoomEncounter(currentRoom, out var success);
                 if (!success) 
@@ -98,4 +106,5 @@ namespace GamePrototype.Game
         
         #endregion
     }
+
 }
