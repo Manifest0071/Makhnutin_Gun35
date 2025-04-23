@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasinoGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasinoGame.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasinoGame.AssemblyInfo.cs
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasinoGame.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\SocialCasino\SocialCasino\bin\Debug\net8.0\SocialCasinoGame.exe
+C:\Users\user\source\repos\SocialCasino\SocialCasino\bin\Debug\net8.0\SocialCasinoGame.deps.json
+C:\Users\user\source\repos\SocialCasino\SocialCasino\bin\Debug\net8.0\SocialCasinoGame.runtimeconfig.json
+C:\Users\user\source\repos\SocialCasino\SocialCasino\bin\Debug\net8.0\SocialCasinoGame.dll
+C:\Users\user\source\repos\SocialCasino\SocialCasino\bin\Debug\net8.0\SocialCasinoGame.pdb
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasinoGame.dll
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\refint\SocialCasinoGame.dll
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasinoGame.pdb
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasinoGame.genruntimeconfig.cache
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\ref\SocialCasinoGame.dll

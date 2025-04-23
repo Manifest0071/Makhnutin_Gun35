@@ -1,0 +1,4 @@
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasino.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasino.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasino.AssemblyInfo.cs
+C:\Users\user\source\repos\SocialCasino\SocialCasino\obj\Debug\net8.0\SocialCasino.csproj.CoreCompileInputs.cache
